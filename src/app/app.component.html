@@ -1,0 +1,107 @@
+<div id="app">
+  <nav class="navbar navbar-expand-lg navbar-light navby">
+    <div class="line"> <img class="img" src="assets/logof.png"></div>
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item active">
+        <a href="/home" class="nav-link" routerLink="home">
+          <div class="red"> &nbsp; Jackpot</div>
+        </a>
+      </li>
+    </ul>
+
+
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mr-auto">
+
+        <li class="nav-item">
+          <a href="/user" class="nav-link" *ngIf="isLoggedIn" routerLink="user">
+            <div class="red">Winners</div>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a href="/JackpotTimer" class="nav-link" *ngIf="isLoggedIn" routerLink="JackpotTimer">
+            <div class="red">Jackpot Timer</div>
+          </a>
+        </li>
+      </ul>
+
+      <ul class="navbar-nav ml-auto" *ngIf="!isLoggedIn">
+        <li class="nav-item">
+          <a class="nav-link">
+            <div class="black line "> {{now | date:'hh:mm:ss'}} &nbsp;</div>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a href="/login" class="nav-link " routerLink="login">
+            <div class="redLog">Private</div>
+          </a>
+        </li>
+      </ul>
+
+      <ul class="navbar-nav ml-auto" *ngIf="isLoggedIn">
+        <li class="nav-item">
+          <a class="nav-link">
+            <div class="black line "> {{now | date:'hh:mm:ss'}} &nbsp;</div>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a href="/profile" class="nav-link" routerLink="profile">
+            <div class="red">{{ username }}</div>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a href="/register" class="nav-link" routerLink="register">
+            <div class="red">Sign Up</div>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a href class="nav-link" (click)="logout()">
+            <div class="redLog">LogOut</div>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+  <br>
+  <router-outlet></router-outlet>
+  <br>
+
+  <div class="items">
+    <div class=" row">
+      <div class="col">
+        <label class="black"> About </label><br>
+        Responsible Gaming <br>
+        Privacy Policy <br>
+        Contact Us
+      </div>
+      <div class="col">
+        <label class="black"> Help </label><br>
+        Sport Betting <br>
+        FAQs <br>
+        Casino
+      </div>
+      <div class="col">
+        <label class="black"> General Terms & Conditions </label><br>
+        General Terms & Conditions <br>
+        Sport Terms & Conditions
+      </div>
+
+      <div class="col">
+        <label class="black"> About </label><br>
+        Live Calendar <br>
+        Result
+      </div>
+      <div class="col">
+        © 2019 - 2021 Topbet216
+      </div>
+    </div>
+  </div>
+  <div style="text-align: center;"> <img class="img" src="assets/logof.png"></div>
+
+</div>

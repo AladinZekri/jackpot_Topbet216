@@ -1,0 +1,129 @@
+.red{
+    background-color: red;
+    height: 100%;
+    width: 100%;
+}
+ngb-carousel .wrapper {
+    position: relative;
+    height: 0;
+    padding-top: 55%; /* Keep ratio for 900x500 images */
+    height: 50vh !important
+
+  }
+  .img{
+      width: 100%;
+  }
+  .imgjp{
+    width: 40%;
+}
+  .items{
+    background-color: #e9e9e9;
+    position: relative; top: 0; left: 0
+}
+  
+  ngb-carousel .wrapper>img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+  }
+
+  .textRed{
+    color: #dd1a22 ;
+  }
+  
+
+  .cust{
+background-color: #e9e9e9;
+border-color: #dd1a22;
+border-radius: 2%;
+color: blue;
+  }
+
+  .btn-primary, .btn-primary:hover, .btn-primary:active, .btn-primary:visited {
+    background-color: #e9e9e9 !important;
+    color: #dd1a22;
+    border-color: #dd1a22;
+    border: 1px solid;
+    /* font-weight: bold; */
+}
+
+.pad{
+  text-align: center;
+  padding-top: 15px;
+}
+
+.cutombtn{
+  background-color: #dd1a22 !important;
+  color: white;
+  border-color: #dd1a22;
+  border-radius: 4cm;
+  border: 1px solid;
+
+  font-weight: bold; 
+}
+
+.outerDiv{
+  padding-top: 1cm;
+
+}
+
+.upperDiv{
+background-color: #dd1a22;
+color: white;
+width: 6cm;
+height: 4cm;
+margin: 0 auto;
+padding: 1.2cm;
+border-top-left-radius: 5%;
+border-top-right-radius: 5%;
+
+}
+.lowerDiv{
+font-weight: bold;
+background-color: white;
+color: #dd1a22;
+height: 4cm;
+width: 6cm;
+margin: 0 auto;
+padding: 1.2cm;
+border-bottom-left-radius: 5%;
+border-bottom-right-radius: 5%;
+border: #dd1a22 1px solid;
+}
+
+.jack{
+  /* padding-top: 5cm; */
+  height: 10cm;
+position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+.imgJack{
+  height: 10cm;
+  background-repeat: no-repeat;
+  background-size: cover;
+  /* background-image: url(../../assets/jack.png); */
+}
+
+#slider {
+top: 1cm;
+  position:relative;
+  left:0;
+  height:400px;
+
+
+}
+
+
+#content {
+  position:relative;
+  top: -5cm;
+}
+
+#content #text {
+  position:relative;
+
+  color:#dd1a22;
+}

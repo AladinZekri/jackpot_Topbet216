@@ -1,0 +1,36 @@
+<div *ngIf='!connected' class="container items"><br>
+    <div class="alert alert-danger" role="alert">
+        This page is not allowed! <br>
+        please Login
+    </div><br>
+</div>
+<div *ngIf='connected' class="container items"><br>
+
+    <h1>Set the Timer :</h1>
+
+    <br>
+    <div>
+
+        <br>
+        <form name="form" (ngSubmit)="f.form.valid" #f="ngForm" novalidate>
+
+            <div class="form-group">
+                <label for="exampleInputPassword1">Win Date</label>
+                <input [(ngModel)]="form.endDate" name="winDate" type="datetime-local" class="form-control"
+                    id="exampleInputPasswor">
+            </div>
+
+            <button (click)="onSubmit2()" type="submit" class="btn btn-success ml-4">Set timer</button>
+        </form>
+        <br><br>
+    </div>
+
+
+    <!-- 
+    <br><br> <button (click)="getCurrDate()">get date</button>
+    <br>
+
+    <input type="datetime-local" [(ngModel)]="fixDate" name="fixDate">
+    <button (click)="getDiff()">get ds</button> -->
+
+</div>
